@@ -1,0 +1,25 @@
+{
+  "Hiking":[
+    {
+      "id": 1,
+      "name": "RichaShaurabh",
+      "age":  27,
+      "married": "yes",
+      "hobbies": "Hiking"
+    },
+    {
+      "id": 2,
+      "name": "Sharad Binjola",
+      "age":  30,
+      "married": "yes",
+      "hobbies": "Hiking"
+    },
+    {
+      "id": 3,
+      "name": "Nilay Binjola",
+      "age":  25,
+      "married": "No",
+      "hobbies": "Hiking"
+    }
+  ]
+}

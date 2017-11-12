@@ -1,0 +1,29 @@
+
+<h3>Add New Member to Club</h3>
+<div>
+  <div>
+    <label>Member Name:</label>
+    <br>
+    <input #newMember>
+  </div>
+
+  <div>
+    <label>Age:</label>
+    <br>
+    <input #newAge type="number">
+  </div>
+
+  <div>
+    <label>Married:</label>
+    <br>
+    <textarea #newMarriageStatus></textarea>
+  </div>
+
+  <div>
+    <label>Hobbies:</label>
+    <br>
+    <textarea #newHobbies></textarea>
+  </div>
+
+  <button type="button" name="button" (click)="createNewMember(newMember, newAge, newMarriageStatus, newHobbies)">Create</button>
+</div>

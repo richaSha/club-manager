@@ -1,0 +1,7 @@
+<h2>Marketplace</h2>
+
+<div *ngFor="let member of clubmembers | async"  class="panel panel-default">
+  <div class="panel-body">
+    <h3><em>{{member.name}}</em> by {{member.age}}</h3>
+  </div>
+</div>
