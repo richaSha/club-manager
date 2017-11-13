@@ -14,7 +14,6 @@ export class FirebaseSeriveService {
   }
 
   addClubmembers(newMember: ClubMember) {
-    debugger;
     this.clubmembers.push(newMember);
   }
 
