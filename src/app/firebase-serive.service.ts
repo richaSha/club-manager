@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { ClubMember } from './club-member';
+import { ClubMember } from './club-member.model';
 
 @Injectable()
 export class FirebaseSeriveService {

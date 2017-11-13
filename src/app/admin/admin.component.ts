@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ClubMember } from '../club-member';
+import { ClubMember } from '../club-member.model';
 import { FirebaseSeriveService } from '../firebase-serive.service';
 import { Router } from '@angular/router';
 
@@ -9,15 +9,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  member :ClubMember;
   constructor(public serviceInfo: FirebaseSeriveService, public route: Router) { }
 
   ngOnInit() {
   }
 
   createNewMember(name: string, age: number, married: string, hobbies: string){
-    this.member = {name: name, age: age, married: married, hobbies: hobbies};
-    this.serviceInfo.addClubmembers(this.member);
+    var member = new ClubMember(name, age,married, hobbies);
+    this.serviceInfo.addClubmembers(member);
     this.route.navigate(['']);
   }
 }
