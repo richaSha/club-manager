@@ -1,7 +1,29 @@
-<h2>Marketplace</h2>
 
-<div *ngFor="let member of clubmembers | async"  class="panel panel-default">
-  <div class="panel-body">
-    <h3><em>{{member.name}}</em> by {{member.age}}</h3>
+<div *ngIf="currentRoute != '/about'">
+  <h2>Marketplace</h2>
+  <div *ngFor="let member of clubmembers | async"  class="panel panel-default">
+    <div class="panel-body">
+      <h3 (click)="memberInfo(member.id)"><em>{{member.name}}</em> by {{member.age}}</h3>
+    </div>
   </div>
+</div>
+
+
+<div *ngIf="currentRoute === '/about'">
+  <p>Family Hobbies is a locally owned RC Hobby store in middle Tennessee (Smyrna) just southeast of Nashville.  We are a family owned business.  We, Billy and Cindy Clemons, started the store in April 2011.
+
+  We believe that life is short and should be enjoyed with family, thus the name “Family Hobbies”.   We have done everything in our power to stock our brick and mortar store with everything you need to support your RC hobbies.  November 2016, we launched our on-line ordering website.  We wanted to take the next step to make your hobby a little easier because we know time is the most valuable commodity.  So now you can set back on your couch and order everything you need!  Plus, you can check stock before you drive over to our store.
+
+  Since we are a brick and mortar store this means that we do not have space to stock as many items as we would like. We can only sell on the website those things that we have in stock. Should you need something that we do not have in stock - please send us an email, give us a call, or if you are close by - stop in! We will be honored to be of assistance to you.  If you are out of state and order on our website, you do not pay sales tax (yay!!).
+
+  If addition, we do everything in our power to save you money!  We do our very best to match all online pricing.  We do this about 95% of the time.  So, please don’t take your business elsewhere if you see a lower price, check with us first.
+
+  PLUS, we sell USED!  Right here in our store!  We purchase used RC product; we take RC product in on trade and we let YOU the customer sell it right here in our store.
+
+  If you are local come in!  We want to see you and help you with your RC vehicle.  I have the most knowledgeable man, my husband Billy.  If he can’t figure it out he will find someone who can!  He will also help you to repair your own vehicle but if you can’t do it we can.  We charge $30 an hour plus parts.
+
+  There are pictures and videos on our Facebook page - take a look at the fun we had at the Family Day racing cars in the parking lot! Below I take you on a Store Tour. Click on the picture below to start your tour.
+
+  If you are currently doing business in our store, we are honored that you choose us as your RC supply store!  If you haven’t done business with us, PLEASE give us a chance to show you how important you are to us.
+</p>
 </div>

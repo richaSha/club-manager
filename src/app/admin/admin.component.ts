@@ -3,6 +3,7 @@ import { ClubMember } from '../club-member.model';
 import { FirebaseSeriveService } from '../firebase-serive.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -11,8 +12,7 @@ import { Router } from '@angular/router';
 export class AdminComponent implements OnInit {
   constructor(public serviceInfo: FirebaseSeriveService, public route: Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   createNewMember(name: string, age: number, married: string, hobbies: string){
     var member = new ClubMember(name, age,married, hobbies);

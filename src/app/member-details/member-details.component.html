@@ -1,0 +1,24 @@
+<h1>Member Info</h1>
+<ul *ngFor="let member of clubmembers |async">
+  <ul *ngIf="member.id == memberId">
+    <li>Name: {{member.name}}</li>
+    <li>Age: {{member.age}}</li>
+    <li>Marital Status: {{member.married}}</li>
+    <li>hobbies: {{member.hobbies}}</li>
+
+    <div *ngIf="admin">
+      <div *ngIf="edit">
+        <h1>Edit Member Info</h1>
+        <li>Name: <input type="text"[(ngModel)]="member.name"></li>
+        <li>Age: <input type="number"[(ngModel)]="member.age"></li>
+        <li>Marital Status: <input type="text"[(ngModel)]="member.married"></li>
+        <li>hobbies: <input type="text"[(ngModel)]="member.hobbies"></li>
+        <button type="button" class="btn btn-info" name="button" (click)="beginUpdatingMember(member)">Done</button>
+      </div>
+      <div *ngIf="!edit">
+        <button type="button" class="btn btn-info" name="button" (click)="showEdit()">Edit Info</button>
+        <button type="button" class="btn btn-info" name="button" (click)="beginDeletingMember(member)">Delete Info</button>
+      </div>
+    </div>
+  </ul>
+</ul>
